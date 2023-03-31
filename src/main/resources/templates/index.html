@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href = "@{/main.css}">
+</head>
+<body>
+    <div th:replace="layouts/header :: header"></div>
+    <div class ="presentation">
+        <img src ="https://rspectr.com/wp-content/uploads/2022/01/smart_gadgets99-c59e48833410752214f5f213b6b97f41-66a771e25ceca942600178a2716fb246-thumb-800x450.jpg"/>
+        <h2> Устал от больших цен на гаджеты?</h2>
+        <p> Здесь вы сможете купить качественную и недорогую технику для себя и близких не выходя из дома </p>
+
+    </div>
+    <main class="container">
+        <div class="items" th:if="${!items.isEmpty()}">
+            <div th:each="el : ${items}">
+                <a th:href="'/item/' + ${el.id}"><img th:src="${el.image}" th:alt="${el.title}"></a>
+                <h3 th:text="${el.title}" />
+                <p th:text="${el.info}" />
+                <span th:text="${el.price} + 'рублей'" />
+            </div>
+        </div>
+        <div th:if="${items.isEmpty()}" class="block">
+            <p>Нет товаров</p>
+        </div>
+    </main>
+       <div th:replace="layouts/footer :: footer"></div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">>>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href = "@{/main.css}">
+</head>
+<body>
+<div th:replace="layouts/header :: header"></div>
+
+<main class = "container">
+    <div class = "block">
+        <h1>Страница про нас. Добро пожаловать на страницу обо мне. Это web приложение было написано в рамках обучения Java Spring и представляется собой
+            практически готовый интернет магазин с системой авторизации и регистрации, размещением товаров, безопасностью и ролями пользователей </h1>
+        <p th:text ="'Hello, ' + ${name}">
+    </div>
+</main>
+<div th:replace="layouts/footer :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" th:href = "@{/main.css}">
+</head>
+<body>
+<div th:replace="layouts/header :: header"></div>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Быстрая доставка</h1>
+            <p>Быстрая доставка по всему миру в короткие сроки</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Безопасная покупка</h1>
+            <p>Любая покупка оплачивается по безопасном сертификатам и вы сразу же получаете чек об оплате, номер для отслеживания и круглосуточное обслуживание</p>
+            <p><a class="btn btn-lg btn-primary" href="/about">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Качественная продукция</h1>
+            <p>Перед отправкой ваших товаров Вам мы тщательно проверяем товар на предмет брака, потертостей и других повреждений потому что мы заботимся о наших клиентах</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="/" class="btn btn-primary my-2">Перейти в магазин</a>
+  </div>
+  <!-- FOOTER -->
+
+</main>
+<div th:replace="layouts/footer :: footer"></div>
+
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+</body>
+</html>

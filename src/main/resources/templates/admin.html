@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" th:href = "@{/main.css}">
+</head>
+<body>
+<div th:replace="layouts/header :: header"></div>
+<div class ="presentation">
+  <h2> Панель администратора</h2>
+  <h3> Пользователи сайта </h3>
+
+</div>
+<main class="container">
+  <div class="users">
+    <h1>Все пользователи сайта</h1>
+    <div th:each="el : ${users}">
+      <a th:text="${el.getRoles()} +' - ' + ${el.getUsername()} + ' '+ ${el.getEmail()}"></a>
+      <h3  />
+    </div>
+  </div>
+
+</main>
+<div th:replace="layouts/footer :: footer"></div>
+
+</body>
+</html>
